@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie photo - Viktor Kozak</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#acceuil" class="logo">
+                <img src="assets/image/logoblanc.svg" alt="Logo" style="height:32px; width:auto; display:block;">
+            </a>
+            <nav>
+                <a href="index.html#acceuil">Accueil</a>
+                <a href="index.html#about">À propos</a>
+                <a href="index.html#savoir">Savoir-faire</a>
+                <a href="index.html#competences">Compétences</a>
+                <a href="index.html#projets">Projets</a>
+                <a href="index.html#contacts">Contact</a>
+            </nav>
+            <div class="lang-switch">
+                <select class="lang-select" aria-label="Choisir la langue">
+                    <option value="fr" selected>&#127467;&#127479; FR</option>
+                    <option value="en">&#127468;&#127463; EN</option>
+                    <option value="pl">&#127477;&#127473; PL</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <section id="galerie">
+        <h2>Galerie photo</h2>
+        <div class="galerie-container">
+            <img src="assets/photos/photo1.jpg" alt="Photo 1">
+            <img src="assets/photos/photo2.jpg" alt="Photo 2">
+            <img src="assets/photos/photo3.jpg" alt="Photo 3">
+            <img src="assets/photos/photo4.jpg" alt="Photo 4">
+            <img src="assets/photos/photo5.jpg" alt="Photo 5">
+            <img src="assets/photos/photo6.jpg" alt="Photo 6">
+            <img src="assets/photos/photo7.jpg" alt="Photo 7">
+            <img src="assets/photos/photo8.jpg" alt="Photo 8">
+            <!-- Ajoute ou retire des images selon tes besoins -->
+        </div>
+    </section>
+    <!-- Lightbox pour la galerie -->
+    <div id="lightbox" style="display:none;">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" src="" alt="">
+        <span class="lightbox-arrow lightbox-prev">&#10094;</span>
+        <span class="lightbox-arrow lightbox-next">&#10095;</span>
+    </div>
+    <footer class="site-footer">
+        <!-- ...copie le footer de index.html... -->
+    </footer>
+    <script>
+const images = Array.from(document.querySelectorAll('.galerie-container img'));
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('.lightbox-img');
+let currentIndex = 0;
+
+function showLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = images[index].src;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function hideLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+}
+function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+}
+function showNext() {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+}
+images.forEach((img, i) => {
+    img.addEventListener('click', () => showLightbox(i));
+});
+lightbox.querySelector('.lightbox-close').onclick = hideLightbox;
+lightbox.querySelector('.lightbox-prev').onclick = showPrev;
+lightbox.querySelector('.lightbox-next').onclick = showNext;
+document.addEventListener('keydown', e => {
+    if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'Escape') hideLightbox();
+    }
+});
+lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) hideLightbox();
+});
+</script>
+</body>
+</html>
