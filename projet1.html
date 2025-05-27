@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet 1 – Viktor Kozak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projet.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#acceuil" class="logo">
+                <img src="assets/image/logoblanc.svg" alt="Logo" style="height:32px; width:auto; display:block;">
+            </a>
+            <nav>
+                <a href="index.html#acceuil">Accueil</a>
+                <a href="index.html#about">À propos</a>
+                <a href="index.html#savoir">Savoir-faire</a>
+                <a href="index.html#competences">Compétences</a>
+                <a href="index.html#projets">Projets</a>
+                <a href="index.html#contacts">Contact</a>
+            </nav>
+            <div class="lang-switch">
+                <select class="lang-select" aria-label="Choisir la langue">
+                    <option value="fr" selected>&#127467;&#127479; FR</option>
+                    <option value="en">&#127468;&#127463; EN</option>
+                    <option value="pl">&#127477;&#127473; PL</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <div class="projet-image" style="background: #eaeaea url('assets/projets/projet1.jpg') center/cover no-repeat;"></div>
+    <section class="projet-intro">
+        <h1 class="projet-intro-title">Titre du projet 1</h1>
+        <div class="projet-intro-date">03.2022</div>
+        <ul class="projet-intro-meta">
+            <li class="meta-tech">
+                <strong>Technologies&nbsp;:</strong><span>&nbsp;</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+            </li>
+            <li class="meta-duree">
+                <strong>Durée&nbsp;:</strong><span>&nbsp;</span>2 semaines
+            </li>
+            <li class="meta-type">
+                <strong>Type&nbsp;:</strong><span>&nbsp;</span>Challenge personnel
+            </li>
+        </ul>
+        <div class="projet-intro-skills-container">
+            <div class="projet-intro-skills">
+                <strong>Compétences développées :</strong>
+                <ul>
+                    <li>Téléchargement d’imagerie via script Python/API</li>
+                    <li>Calcul d’indices NDVI sur plusieurs dates</li>
+                    <li>Visualisation cartographique avec QGIS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="projet-content">
+        <div class="projet-feuille-a4">
+            <h2>Conception de la base de données de Couchsurfing</h2>
+            <div style="font-size:1.1em; color:#888; margin-bottom: 1.5em;">11/11/2022</div>
+            <h3>Contexte</h3>
+            <p>
+                <strong>Présentation du projet</strong><br>
+                La traduction du terme couchsurfing en français donne à peu près ça : surfer sur canapé. L’idée du couchsurfing est bien là : se loger gratuitement dans le monde entier chez des particuliers qui offrent leur hospitalité en prêtant leur canapé, un matelas à même le sol ou un coin de leur pelouse pour planter une tente, etc. L’objectif du couchsurfing est de pouvoir partager pour un court séjour le quotidien de ses hôtes et de bénéficier de leurs conseils.
+            </p>
+            <p>
+                Accueillir des personnes vous donne d’abord la chance de voir si partager l’espace avec un nouvel ami est quelque chose avec lequel vous êtes à l’aise avant de commencer vos propres voyages.<br>
+                Cela donne également à la personne qui séjourne avec vous une chance de faire savoir à tout le monde à quel point vous étiez un hôte formidable, via des avis laissés sur votre profil, ce qui rend les gens beaucoup plus disposés à vous héberger et laisse tous les membres de la communauté se sentir en sécurité.
+            </p>
+            <h3>Projet</h3>
+            <p>
+                L’objectif ici est de concevoir de manière simplifiée les interactions évoquées ci-dessus au travers d’une base de données, représentant le système d’information du site internet de l’application.
+            </p>
+            <h3>Méthodologie</h3>
+            <p>
+                La base de données sera conçue à l’aide du modèle entité-association.
+            </p>
+            <h4>Démarche</h4>
+            <h5>Modèle conceptuel de données</h5>
+            <p>Figure 1. Modèle conceptuel de données.</p>
+            <h5>Modèle logique de données</h5>
+            <h3>Résultats</h3>
+            <p>
+                Naturellement, on souhaiterait voir à quel point ma conception a été efficace afin d’exploiter la base de données, alors je l’ai interrogée afin de savoir :
+            </p>
+            <ol>
+                <li>Calculer le nombre de communes en Ile-de-France</li>
+                <li>Lister les hôtes qui ont un logement plutôt propre (note supérieure à 5 sur 10)</li>
+                <li>Trouver l’hôte avec la note la plus haute. En faire de même avec l’invité.</li>
+                <li>Lister les types de logement par ordre alphabétique en fonction de leur code Insee</li>
+                <li>Dans quelles communes se trouvent-t-ils ?</li>
+                <li>Est-ce qu’il y a eu quelqu’un qui a vu sa demande refusée ? Pourquoi ?</li>
+                <li>Si je veux visiter la Corse début septembre et que je veux y rester 1 semaine, ai-je des chances d’aller dormir chez l’habitant ?</li>
+                <li>En affichant les profils des hôtes, calculer la moyenne des notes de tous les critères qualifiant l’hôte et la comparer à sa propre note à lui.</li>
+            </ol>
+            <p>
+                Voulez-vous connaître les réponses ? Jetez un œil au lien suivant où vous trouverez les réponses ainsi que le script de la base de données.<br>
+            </p>
+        </div>
+    </section>
+
+    <section class="projet-navigation">
+        <!-- Pas de bouton "précédent" -->
+        <a class="projet-nav-retour" href="index.html#projets">Retour</a>
+        <a class="projet-nav-btn" href="projet2.html" aria-label="Projet suivant">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#003c8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </section>
+</body>
+</html>

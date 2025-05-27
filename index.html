@@ -66,24 +66,30 @@
           <div class="savoir-container">
               <div class="savoir-card">
                   <div class="savoir-header">
-                      <div class="savoir-logo"></div>
+                      <div class="savoir-logo">
+                          <img src="assets/icons/satellite.svg" alt="Nom de la compétence" width="43" height="43">
+                      </div>
                       <h3>Télédétection</h3>
                   </div>
-                  <p>Stage en développement web chez XYZ, où j'ai conçu un site vitrine responsive.</p>
+                  <p>Compréhension des chaînes de traitement d’images satellites (Sentinel, Landsat), calcul d’indices (NDVI, NDWI…), préparation et classification d’images à des fins d’analyse environnementale ou territoriale.</p>
               </div>
               <div class="savoir-card">
                   <div class="savoir-header">
-                      <div class="savoir-logo"></div>
+                      <div class="savoir-logo">
+                          <img src="assets/icons/database.svg" alt="Nom de la compétence" width="43" height="43">
+                      </div>
                       <h3>Data</h3>
                   </div>
-                  <p>Projet universitaire : création d'une application de gestion de tâches en équipe.</p>
+                  <p>Maîtrise des fondamentaux de la structuration, du nettoyage et de la manipulation de données (spatiales et tabulaires), avec une initiation à Python (Pandas, GeoPandas) et SQL pour automatiser les traitements.</p>
               </div>
               <div class="savoir-card">
                   <div class="savoir-header">
-                      <div class="savoir-logo"></div>
+                      <div class="savoir-logo">
+                          <img src="assets/icons/loupe.svg" alt="Nom de la compétence" width="43" height="43">
+                      </div>
                       <h3>IA - Automatisation</h3>
                   </div>
-                  <p>Formation autodidacte sur les technologies JavaScript modernes et frameworks front-end.</p>
+                  <p>Premières compétences en automatisation de workflows SIG et exploration de l’apprentissage automatique appliqué aux données spatiales, via des scripts Python (scikit-learn, API) et des logiques de traitement reproductibles.</p>
               </div>
           </div>
       </section>
@@ -155,30 +161,42 @@
     <section id="projets">
         <h2>Projets</h2>
         <div class="projets-container">
-            <div class="projet-card">
-                <span class="projet-date">02.2024</span>
-                <div class="projet-image"></div>
-                <div class="projet-card-content">
-                    <h3>Titre du projet 1</h3>
-                    <p>Application web de gestion de tâches avec authentification et interface responsive.</p>
+            <a href="projet1.html" class="projet-card-link">
+                <div class="projet-card">
+                    <span class="projet-date">02.2024</span>
+                    <div class="projet-image">
+                        <img src="assets/projets/projet1.jpg" alt="Projet 1" />
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>Titre du projet 1</h3>
+                        <p>Application web de gestion de tâches avec authentification et interface responsive.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="projet-card">
-                <span class="projet-date">06.2023</span>
-                <div class="projet-image"></div>
-                <div class="projet-card-content">
-                    <h3>Titre du projet 2</h3>
-                    <p>Site vitrine pour une association locale, réalisé en HTML, CSS et JavaScript.</p>
+            </a>
+            <a href="projet2.html" class="projet-card-link">
+                <div class="projet-card">
+                    <span class="projet-date">06.2023</span>
+                    <div class="projet-image">
+                        <img src="assets/projets/projet2.jpg" alt="Projet 2" />
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>Titre du projet 2</h3>
+                        <p>Site vitrine pour une association locale, réalisé en HTML, CSS et JavaScript.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="projet-card">
-                <span class="projet-date">03.2022</span>
-                <div class="projet-image"></div>
-                <div class="projet-card-content">
-                    <h3>Titre du projet 3</h3>
-                    <p>Développement d'un mini-jeu interactif en JavaScript avec score et niveaux.</p>
+            </a>
+            <a href="projet3.html" class="projet-card-link">
+                <div class="projet-card">
+                    <span class="projet-date">03.2022</span>
+                    <div class="projet-image">
+                        <img src="assets/projets/projet3.jpg" alt="Projet 3" />
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>Titre du projet 3</h3>
+                        <p>Développement d'un mini-jeu interactif en JavaScript avec score et niveaux.</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
     <div class="contact-footer-bg">
@@ -192,7 +210,10 @@
                     </p>
                 </div>
                 <form class="contact-form">
-                    <input type="text" id="nom" name="nom" required placeholder="Nom">
+                    <div class="contact-form-row">
+                        <input type="text" id="prenom" name="prenom" required placeholder="Prénom">
+                        <input type="text" id="nom" name="nom" required placeholder="Nom">
+                    </div>
                     <input type="email" id="email" name="email" required placeholder="Email">
                     <input type="text" id="sujet" name="sujet" required placeholder="Sujet">
                     <textarea id="message" name="message" rows="5" required placeholder="Message"></textarea>
@@ -212,10 +233,9 @@
                 Passionné par le développement web et la data.
               </p>
               <div class="social-icons">
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="GitHub">GitHub</a>
                 <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="X">X</a>
-                <a href="#" aria-label="YouTube">YouTube</a>
               </div>
             </div>
             <div class="footer-column">
@@ -244,5 +264,112 @@
         </footer>
     </div>
     <script src="js/main.js"></script>
+    <script>
+const translations = {
+  fr: {
+    accueil: "Accueil",
+    about: "À propos",
+    savoir: "Savoir-faire",
+    competences: "Compétences",
+    projets: "Projets",
+    contacts: "Contact",
+    titre: "Mon Portfolio",
+    h1: "Viktor Kozak",
+    portfolio: "Portfolio",
+    btnCv: "CV",
+    btnGalerie: "Galerie photo &#10148;",
+    aboutTitle: "À propos de moi",
+    aboutP1: "Passionné par le développement web et les nouvelles technologies, je suis actuellement étudiant en informatique. Curieux, motivé et toujours prêt à apprendre, je réalise des projets variés pour développer mes compétences techniques et personnelles. Ce portfolio présente mon parcours, mes compétences et quelques-unes de mes réalisations.",
+    aboutP2: "J’aime relever des défis et explorer de nouveaux domaines, que ce soit dans le back-end, le SIG ou le design. Mon objectif est de mettre mes connaissances au service de projets innovants et de continuer à progresser dans le monde du numérique.",
+    savoirTitle: "Mon Savoir",
+    competencesTitle: "Compétences",
+    projetsTitle: "Projets",
+    contactTitle: "Contact",
+    contactInfo: `Une question, une idée ou un projet ?<br><br>
+Je reste ouvert aux opportunités de stage, de collaboration ou simplement à échanger autour de ces thématiques.<br><br>
+Vous pouvez me contacter via le formulaire ou m’écrire directement par mail.<br>
+N'hésitez pas, je réponds généralement sous 48h.`
+  },
+  en: {
+    accueil: "Home",
+    about: "About",
+    savoir: "Expertise",
+    competences: "Skills",
+    projets: "Projects",
+    contacts: "Contact",
+    titre: "My Portfolio",
+    h1: "Viktor Kozak",
+    portfolio: "Portfolio",
+    btnCv: "Resume",
+    btnGalerie: "Photo gallery &#10148;",
+    aboutTitle: "About me",
+    aboutP1: "Passionate about web development and new technologies, I am currently a computer science student. Curious, motivated and always eager to learn, I carry out various projects to develop my technical and personal skills. This portfolio presents my background, my skills and some of my achievements.",
+    aboutP2: "I like to take on challenges and explore new fields, whether in back-end, GIS or design. My goal is to put my knowledge at the service of innovative projects and to continue progressing in the digital world.",
+    savoirTitle: "Expertise",
+    competencesTitle: "Skills",
+    projetsTitle: "Projects",
+    contactTitle: "Contact",
+    contactInfo: `A question, an idea or a project?<br><br>
+I am open to internship or collaboration opportunities, or simply to discuss these topics.<br><br>
+You can contact me via the form or write to me directly by email.<br>
+Don't hesitate, I usually reply within 48 hours.`
+  },
+  pl: {
+    accueil: "Strona główna",
+    about: "O mnie",
+    savoir: "Umiejętności",
+    competences: "Kompetencje",
+    projets: "Projekty",
+    contacts: "Kontakt",
+    titre: "Moje Portfolio",
+    h1: "Viktor Kozak",
+    portfolio: "Portfolio",
+    btnCv: "CV",
+    btnGalerie: "Galeria zdjęć &#10148;",
+    aboutTitle: "O mnie",
+    aboutP1: "Zafascynowany rozwojem stron internetowych i nowymi technologiami, obecnie studiuję informatykę. Jestem ciekawy, zmotywowany i zawsze chętny do nauki, realizuję różnorodne projekty, aby rozwijać swoje umiejętności techniczne i osobiste. To portfolio przedstawia moją ścieżkę, umiejętności i niektóre z moich realizacji.",
+    aboutP2: "Lubię podejmować wyzwania i odkrywać nowe dziedziny, zarówno w back-endzie, GIS, jak i designie. Moim celem jest wykorzystanie mojej wiedzy w innowacyjnych projektach i dalszy rozwój w świecie cyfrowym.",
+    savoirTitle: "Umiejętności",
+    competencesTitle: "Kompetencje",
+    projetsTitle: "Projekty",
+    contactTitle: "Kontakt",
+    contactInfo: `Pytanie, pomysł lub projekt?<br><br>
+Jestem otwarty na staże, współpracę lub po prostu rozmowę na te tematy.<br><br>
+Możesz się ze mną skontaktować przez formularz lub napisać bezpośrednio maila.<br>
+Nie wahaj się, zazwyczaj odpowiadam w ciągu 48 godzin.`
+  }
+};
+
+function setLang(lang) {
+  // Menu
+  document.querySelector('nav a[href="#acceuil"]').innerHTML = translations[lang].accueil;
+  document.querySelector('nav a[href="#about"]').innerHTML = translations[lang].about;
+  document.querySelector('nav a[href="#savoir"]').innerHTML = translations[lang].savoir;
+  document.querySelector('nav a[href="#competences"]').innerHTML = translations[lang].competences;
+  document.querySelector('nav a[href="#projets"]').innerHTML = translations[lang].projets;
+  document.querySelector('nav a[href="#contacts"]').innerHTML = translations[lang].contacts;
+  // Titres
+  document.title = translations[lang].titre;
+  document.querySelector('h1').innerHTML = translations[lang].h1;
+  document.querySelector('.acceuil-content p').innerHTML = translations[lang].portfolio;
+  document.querySelector('.btn-cv').innerHTML = translations[lang].btnCv;
+  document.querySelector('.btn-main:not(.btn-cv)').innerHTML = translations[lang].btnGalerie;
+  document.querySelector('#about > h2').innerHTML = translations[lang].aboutTitle;
+  document.querySelectorAll('#about .about-paragraphs p')[0].innerHTML = translations[lang].aboutP1;
+  document.querySelectorAll('#about .about-paragraphs p')[1].innerHTML = translations[lang].aboutP2;
+  document.querySelectorAll('#about .about-paragraphs p')[2].innerHTML = translations[lang].aboutP2;
+  document.querySelector('#savoir > h2').innerHTML = translations[lang].savoirTitle;
+  document.querySelector('#competences > h2').innerHTML = translations[lang].competencesTitle;
+  document.querySelector('#projets > h2').innerHTML = translations[lang].projetsTitle;
+  document.querySelector('#contacts > h2').innerHTML = translations[lang].contactTitle;
+  // Contact info
+  document.querySelector('.contact-info').innerHTML = `<p>${translations[lang].contactInfo}</p>`;
+}
+
+// Gestion du select
+document.querySelector('.lang-select').addEventListener('change', function() {
+  setLang(this.value);
+});
+</script>
 </body>
 </html>

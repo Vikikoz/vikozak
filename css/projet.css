@@ -1,0 +1,378 @@
+/* Style journal moderne pour la section projet */
+body {
+    background: black;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    /* Pas de font-family ici pour ne pas toucher le header */
+}
+
+.projet-bg-img,
+.projet-bg-voile {
+    display: none !important;
+}
+
+.projet-image {
+    width: 100vw;
+    max-width: 100vw;
+    height: 420px;
+    display: block;
+    margin: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #eee;
+    background: #eaeaea; /* l'image de fond est ajoutée en inline dans le HTML */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.projet-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.38); /* voile noir */
+    backdrop-filter: blur(4px); /* effet flou */
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Décale le contenu principal sous la bannière */
+main {
+    position: relative;
+    z-index: 10;
+    margin-top: 420px;
+}
+
+/* Optionnel : sur mobile, réduire la hauteur */
+@media (max-width: 600px) {
+    .projet-image {
+        height: 120px;
+    }
+    main {
+        margin-top: 120px;
+    }
+}
+
+.projet-image-caption {
+    text-align: center;
+    color: #888;
+    font-size: 0.98em;
+    margin-top: -1.5em;
+    margin-bottom: 2em;
+}
+
+.projet-detail p {
+    font-size: 1.18em;
+    line-height: 1.7;
+    margin: 0 48px 1.5em 48px;
+}
+
+.projet-detail ul, .projet-detail ol {
+    margin: 0 48px 1.5em 72px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.projet-focus {
+    margin: 2em 48px;
+    padding: 1.2em 1.5em;
+    background: #f7e70022;
+    border-left: 4px solid #f7e700;
+    font-size: 1.15em;
+    font-style: italic;
+    color: #222;
+}
+
+.projet-detail a {
+    color: #d4b000;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.projet-detail a:hover {
+    color: #222;
+    background: #f7e700;
+}
+
+@media (max-width: 900px) {
+    .projet-detail {
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .projet-detail {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.projet-intro {
+    background: #fff;
+    width: 100%;
+    max-width: none; /* Permet aux enfants de s'étendre */
+    margin: 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    border-radius: 0;
+    padding: 60px 32px 60px 32px;
+    position: relative;
+    z-index: 11;
+    margin-top: 420px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+    .projet-intro {
+        margin-top: 120px;
+        padding: 24px 8px 16px 8px;
+    }
+}
+
+.projet-intro-title {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2.4em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+    color: #181818;
+    background: none;
+    display: block;           /* <-- change inline-block en block */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projet-intro-date {
+    font-size: 1.1em;
+    color: #888;
+    margin-bottom: 1em;
+    max-width: 1200px;         /* largeur maximale du bloc */
+    margin-left: auto;        /* centre horizontalement */
+    margin-right: auto;       /* centre horizontalement */
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.projet-intro-desc {
+    font-size: 1.18em;
+    color: #444;
+    margin-bottom: 1.2em;
+    max-width: 1200px;         /* largeur maximale du bloc */
+    margin-left: auto;        /* centre horizontalement */
+    margin-right: auto;       /* centre horizontalement */
+    margin-top: 10px;
+}
+
+.projet-intro-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* Centre les cartes */
+    gap: 1.5em;
+    font-size: 1em;
+    color: #222;
+    max-width: 800px;         /* Largeur max */
+    width: 100%;               /* Prend toute la largeur dispo */
+    box-sizing: border-box;
+}
+.projet-intro-meta li {
+    /* Suppression du fond et de la bordure jaune */
+    background: #f5f5f5;
+    border-left: 5px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #222;
+    display: flex;
+    align-items: center;
+}
+
+.projet-intro-meta .meta-tech {
+    background: #def0ff;
+    color: #003c8f;
+    border-left: 4px solid #7ecbff;
+}
+
+.projet-intro-meta .meta-duree {
+    background: #ffe9a8;
+    color: #8a6d00;
+    border-left: 4px solid #ffd34d;
+}
+
+.projet-intro-meta .meta-type {
+    background: #ffdde0;
+    color: #a7002c;
+    border-left: 4px solid #ff8fa3;
+}
+
+.projet-intro-skills {
+    background: #b4ffd1;
+    border-left: 4px solid #63ca63;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #00410b;
+    margin-top: 16px;
+    width: 100%;            /* Prend toute la largeur du container */
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.projet-intro-skills-container {
+    max-width: 800px;      /* Même largeur max pour les deux */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.projet-intro-skills ul {
+    margin: 0.5em 0 0 1.2em;
+    padding: 0;
+}
+
+.projet-intro-skills li {
+    margin-bottom: 0.4em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.projet-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 60px 0 80px 0;
+    background: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    margin-top: 0;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 600px) {
+    .projet-content {
+        margin-top: 0; /* Idem sur mobile */
+        padding: 0 0 24px 0;
+    }
+}
+
+.projet-feuille-a4 {
+    background: #ffffff;
+    width: 1200px;      /* A4 largeur en px à 96dpi */
+    min-height: 1123px; /* A4 hauteur en px à 96dpi */
+    box-shadow: 0 8px 44px rgba(0,0,0,0.20);
+    border-radius: 8px;
+    padding: 48px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    margin-top: 40px; /* Ajoute un espace en haut */
+}
+
+.projet-feuille-a4 > * {
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+@media (max-width: 900px) {
+    .projet-feuille-a4 > * {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+section.projet-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+    padding: 36px 0 24px 0;
+    background: #fff;
+    padding-bottom: 50px;
+}
+
+.projet-nav-btn {
+    background: #b9caff;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,60,143,0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    outline: none;
+    margin: 0 8px;
+}
+
+.projet-nav-btn:hover, .projet-nav-btn:focus {
+    background: #def0ff;
+    box-shadow: 0 4px 16px rgba(0,60,143,0.15);
+    transform: translateY(-2px) scale(1.07);
+}
+
+.projet-nav-btn svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
+.projet-nav-retour {
+    background: #1f1f1f;
+    color: #fff;
+    border-radius: 24px;
+    padding: 12px 28px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: 1px solid #1a2027;
+    margin: 0 16px;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.projet-nav-retour:hover, .projet-nav-retour:focus {
+    background: #16202a;
+    color: #fff;
+    border: 1px solid #11171d;
+}
+
+.projet-image,
+.projet-image * {
+    font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Ajoute dans projet.css ou styles.css */
+.tech-badge {
+    display: inline-block;
+    background: #ffffff6c; 
+    color: #003c8f;
+    border-radius: 6px;
+    padding: 3px 12px;
+    margin: 0 6px 0 0;
+    font-size: 0.98em;
+    border: 1px solid #7ecbff;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
+
