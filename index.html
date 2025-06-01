@@ -15,7 +15,7 @@
             <a href="#acceuil" class="logo">
                 <img src="assets/image/logoblanc.svg" alt="Logo" style="height:32px; width:auto; display:block;">
             </a>
-            <nav>
+            <nav class="main-nav">
                 <a href="#acceuil">Accueil</a>
                 <a href="#about">À propos</a>
                 <a href="#savoir">Savoir-faire</a>
@@ -364,7 +364,28 @@ function setLang(lang) {
   document.querySelector('#contacts > h2').innerHTML = translations[lang].contactTitle;
   // Contact info
   document.querySelector('.contact-info').innerHTML = `<p>${translations[lang].contactInfo}</p>`;
+  setTimeout(() => {
+    document.querySelectorAll('.section-title-appear').forEach(h2 => h2.classList.remove('visible'));
+    revealTitlesOnScroll();
+  }, 50);
 }
+
+// Ajoute la classe d'animation à tous les h2 de section au chargement
+document.querySelectorAll(
+  '#about > h2, #savoir > h2, #competences > h2, #projets > h2, #contacts > h2'
+).forEach(h2 => h2.classList.add('section-title-appear'));
+
+// Fonction d'apparition au scroll
+function revealTitlesOnScroll() {
+  document.querySelectorAll('.section-title-appear').forEach(h2 => {
+    const rect = h2.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 60) {
+      h2.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealTitlesOnScroll);
+window.addEventListener('DOMContentLoaded', revealTitlesOnScroll);
 
 // Gestion du select
 document.querySelector('.lang-select').addEventListener('change', function() {

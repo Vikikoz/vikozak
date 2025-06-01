@@ -311,6 +311,8 @@ section.projet-navigation {
     border-radius: 50%;
     width: 56px;
     height: 56px;
+    min-width: 56px; /* Ajouté pour garder la place */
+    min-height: 56px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -321,16 +323,8 @@ section.projet-navigation {
     margin: 0 8px;
 }
 
-.projet-nav-btn:hover, .projet-nav-btn:focus {
-    background: #def0ff;
-    box-shadow: 0 4px 16px rgba(0,60,143,0.15);
-    transform: translateY(-2px) scale(1.07);
-}
-
-.projet-nav-btn svg {
-    display: block;
-    width: 28px;
-    height: 28px;
+.projet-nav-btn.invisible {
+    visibility: hidden; /* Garde la place mais cache le bouton */
 }
 
 .projet-nav-retour {

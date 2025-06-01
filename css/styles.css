@@ -250,6 +250,7 @@ footer {
     justify-content: center;      /* Centrage horizontal */
     align-items: flex-end;
     margin-top: 36px;
+    flex-wrap: wrap; /* Permet le retour à la ligne si trop de logos */
 }
 
 .competence-logo {
@@ -632,6 +633,25 @@ footer {
     background: transparent; /* On enlève l'ancien background */
 }
 
+.main-header .main-nav {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centre verticalement les liens dans le header */
+    justify-content: center;
+    gap: 18px;
+    z-index: 10;
+    background: transparent;
+    min-width: 850px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
 .main-header::before {
     content: "";
     position: absolute;
@@ -649,7 +669,7 @@ footer {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 8px;
+    padding: 0 0px;
     height: 44px;
     min-height: 14px;
     box-sizing: border-box;
@@ -661,6 +681,12 @@ footer {
     font-size: 20px;      /* ← Augmente la taille du texte du logo */
     line-height: 32px;    /* ← Augmente la hauteur de ligne */
     height: 32px;         /* ← Augmente la hauteur du conteneur */
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+.main-header .logo:hover,
+.main-header .logo:focus {
+    transform: scale(1.13);
 }
 
 .main-header nav {
@@ -929,7 +955,7 @@ footer {
 
 /* Galerie photo */
 #galerie {
-    background: #000000;
+    background: #ffffff;
     color: #fff;
     padding: 80px 0 60px 0;
     text-align: center;
@@ -943,8 +969,8 @@ footer {
 
 .galerie-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 photos par rangée */
-    gap: 40px;
+    grid-template-columns: 1fr; /* 1 image par ligne */
+    gap: 80px;
     padding-left: 120px;
     padding-right: 120px;
     margin-left: 0;
@@ -953,21 +979,21 @@ footer {
 }
 
 .galerie-container img {
-    width: 95%;              /* Diminue la taille des cadres */
-    max-width: 860px;        /* Limite la largeur max */
+    width: 95%;
+    max-width: 860px;
     min-width: 0;
     min-height: 120px;
-    aspect-ratio: 4/3;
-    height: auto;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    height: auto;           /* Respecte le ratio naturel */
+    object-fit: contain;    /* Ou 'cover' selon ton besoin */
+    box-shadow: none;
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
-    background: #000000;
-    padding: 32px 24px;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    border: none;
     box-sizing: border-box;
     display: block;
-    border-radius: 0;
-    border: 1px solid #444;
 }
 
 /* Lightbox galerie */
@@ -1478,4 +1504,17 @@ footer {
         color: #f7e700;
     }
 }
+
+/* Animation titres de section */
+.section-title-appear {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+.section-title-appear.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
