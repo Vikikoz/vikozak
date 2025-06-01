@@ -164,6 +164,38 @@ footer {
     /* La hauteur s'adapte automatiquement au contenu */
 }
 
+/* Effet d’illumination de survol pour les cartes savoir et compétences */
+.savoir-card,
+.competence-card {
+  --x: 50%;
+  --y: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, filter 0.3s;
+}
+
+.savoir-card::before,
+.competence-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.savoir-card:hover::before,
+.competence-card:hover::before {
+  opacity: 1;
+}
+
+.savoir-card:hover,
+.competence-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(80,180,255,0.18), 0 1.5px 8px 0 rgba(80,180,255,0.10);
+  filter: brightness(1.07);
+}
+
 .savoir-header {
     display: flex;
     align-items: center;
@@ -186,6 +218,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.savoir-logo svg {
+    stroke: #7c7c7c; /* Mets ici la couleur souhaitée */
 }
 
 #competences {
@@ -436,7 +472,6 @@ footer {
     flex-direction: column;
     gap: 12px;
     box-sizing: border-box;
-    /* Nouveau style inspiré de .savoir-card */
     background: rgba(0, 0, 0, 0.65); /* Fond noir semi-transparent */
     color: #fff;
     border-radius: 12px;
@@ -1344,11 +1379,22 @@ footer {
         font-size: 0.98em;
         margin-bottom: 12px;
     }
+@media (max-width: 480px) {
+    .contact-info {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        box-sizing: border-box;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+}
     .contact-form {
-        max-width: 100%;
+        flex: 1 1 100%;
         min-width: 0;
-        padding: 18px 10px;
-        font-size: 0.98em;
+        max-width: 100%;
+        width: 100%;
     }
     .contact-form-row {
         flex-direction: column;
@@ -1505,6 +1551,16 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    #about > h2,
+    #savoir > h2,
+    #competences > h2,
+    #projets > h2,
+    #contacts > h2 {
+        font-size: 1.6em; /* ou la taille souhaitée */
+    }
+}
+
 /* Animation titres de section */
 .section-title-appear {
   opacity: 0;
@@ -1518,3 +1574,16 @@ footer {
 }
 
 
+@media (max-width: 480px) {
+    .contact-info {
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+}
+
+
+.footer-mail {
+    color: #a1b2ff; /* Choisis la couleur souhaitée */
+    font-weight: regular;
+}

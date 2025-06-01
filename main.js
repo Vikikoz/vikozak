@@ -37,3 +37,23 @@ function setLang(lang) {
     revealTitlesOnScroll();
   }, 50);
 }
+
+
+// ...existing code...
+
+// Effet d’illumination dynamique sur les cartes savoir
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".savoir-card").forEach(card => {
+    card.addEventListener("mousemove", e => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty("--x", `${x}%`);
+      card.style.setProperty("--y", `${y}%`);
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.setProperty("--x", "50%");
+      card.style.setProperty("--y", "50%");
+    });
+  });
+});

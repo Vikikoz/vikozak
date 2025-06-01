@@ -64,32 +64,47 @@
       <section id="savoir">
           <h2>Mon Savoir</h2>
           <div class="savoir-container">
+              <!-- SAVOIR -->
               <div class="savoir-card">
                   <div class="savoir-header">
                       <div class="savoir-logo">
-                          <img src="assets/icons/satellite.svg" alt="Nom de la compétence" width="43" height="43">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-satellite-icon lucide-satellite">
+                              <path d="M13 7 9 3 5 7l4 4"/>
+                              <path d="m17 11 4 4-4 4-4-4"/>
+                              <path d="m8 12 4 4 6-6-4-4Z"/>
+                              <path d="m16 8 3-3"/>
+                              <path d="M9 21a6 6 0 0 0-6-6"/>
+                          </svg>
                       </div>
-                      <h3>Télédétection</h3>
+                      <h3 data-i18n="savoir1Title">Télédétection</h3>
                   </div>
-                  <p>Compréhension des chaînes de traitement d’images satellites (Sentinel, Landsat), calcul d’indices (NDVI, NDWI…), préparation et classification d’images à des fins d’analyse environnementale ou territoriale.</p>
+                  <p data-i18n="savoir1Desc">Compréhension des chaînes de traitement d’images satellites (Sentinel, Landsat), calcul d’indices (NDVI, NDWI…), préparation et classification d’images à des fins d’analyse environnementale ou territoriale.</p>
               </div>
               <div class="savoir-card">
                   <div class="savoir-header">
                       <div class="savoir-logo">
-                          <img src="assets/icons/database.svg" alt="Nom de la compétence" width="43" height="43">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database-icon lucide-database">
+                              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                              <path d="M3 5V19A9 3 0 0 0 21 19V5"/>
+                              <path d="M3 12A9 3 0 0 0 21 12"/>
+                          </svg>
                       </div>
-                      <h3>Data</h3>
+                      <h3 data-i18n="savoir2Title">Data</h3>
                   </div>
-                  <p>Maîtrise des fondamentaux de la structuration, du nettoyage et de la manipulation de données (spatiales et tabulaires), avec une initiation à Python (Pandas, GeoPandas) et SQL pour automatiser les traitements.</p>
+                  <p data-i18n="savoir2Desc">Maîtrise des fondamentaux de la structuration, du nettoyage et de la manipulation de données (spatiales et tabulaires), avec une initiation à Python (Pandas, GeoPandas) et SQL pour automatiser les traitements.</p>
               </div>
               <div class="savoir-card">
                   <div class="savoir-header">
                       <div class="savoir-logo">
-                          <img src="assets/icons/loupe.svg" alt="Nom de la compétence" width="43" height="43">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-check-icon lucide-search-check">
+                              <path d="m8 11 2 2 4-4"/>
+                              <circle cx="11" cy="11" r="8"/>
+                              <path d="m21 21-4.3-4.3"/>
+                          </svg>
                       </div>
-                      <h3>IA - Automatisation</h3>
+                      <h3 data-i18n="savoir3Title">IA - Automatisation</h3>
                   </div>
-                  <p>Premières compétences en automatisation de workflows SIG et exploration de l’apprentissage automatique appliqué aux données spatiales, via des scripts Python (scikit-learn, API) et des logiques de traitement reproductibles.</p>
+                  <p data-i18n="savoir3Desc">Premières compétences en automatisation de workflows SIG et exploration de l’apprentissage automatique appliqué aux données spatiales, via des scripts Python (scikit-learn, API) et des logiques de traitement reproductibles.</p>
               </div>
           </div>
       </section>
@@ -161,6 +176,7 @@
     <section id="projets">
         <h2>Projets</h2>
         <div class="projets-container">
+            <!-- PROJETS -->
             <a href="projet1.html" class="projet-card-link">
                 <div class="projet-card">
                     <span class="projet-date">02.2024</span>
@@ -168,8 +184,8 @@
                         <img src="assets/projets/projet1.jpg" alt="Projet 1" />
                     </div>
                     <div class="projet-card-content">
-                        <h3>Titre du projet 1</h3>
-                        <p>Application web de gestion de tâches avec authentification et interface responsive.</p>
+                        <h3 data-i18n="projet1Title">Titre du projet 1</h3>
+                        <p data-i18n="projet1Desc">Application web de gestion de tâches avec authentification et interface responsive.</p>
                     </div>
                 </div>
             </a>
@@ -180,8 +196,8 @@
                         <img src="assets/projets/projet2.jpg" alt="Projet 2" />
                     </div>
                     <div class="projet-card-content">
-                        <h3>Titre du projet 2</h3>
-                        <p>Site vitrine pour une association locale, réalisé en HTML, CSS et JavaScript.</p>
+                        <h3 data-i18n="projet2Title">Titre du projet 2</h3>
+                        <p data-i18n="projet2Desc">Site vitrine pour une association locale, réalisé en HTML, CSS et JavaScript.</p>
                     </div>
                 </div>
             </a>
@@ -192,8 +208,8 @@
                         <img src="assets/projets/projet3.jpg" alt="Projet 3" />
                     </div>
                     <div class="projet-card-content">
-                        <h3>Titre du projet 3</h3>
-                        <p>Développement d'un mini-jeu interactif en JavaScript avec score et niveaux.</p>
+                        <h3 data-i18n="projet3Title">Titre du projet 3</h3>
+                        <p data-i18n="projet3Desc">Développement d'un mini-jeu interactif en JavaScript avec score et niveaux.</p>
                     </div>
                 </div>
             </a>
@@ -228,37 +244,37 @@
           <div class="footer-container">
             <div class="footer-column">
               <h2>Viktor Kozak</h2>
-              <p>
+              <p data-i18n="footerDesc">
                 Portfolio, projets et contact.<br>
                 Passionné par le développement web et la data.
               </p>
               <div class="social-icons">
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/in/viktorkozak/" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Vikikoz" aria-label="GitHub">GitHub</a>
+                <a href="https://www.instagram.com/vikazok/" aria-label="Instagram">Instagram</a>
               </div>
             </div>
             <div class="footer-column">
-              <h3>Liens utiles</h3>
+              <h3 data-i18n="footerLinksTitle">Liens utiles</h3>
               <ul>
-                <li><a href="#acceuil">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#savoir">Savoir-faire</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contacts">Contact</a></li>
+                <li><a href="#acceuil" data-i18n="accueil">Accueil</a></li>
+                <li><a href="#about" data-i18n="about">À propos</a></li>
+                <li><a href="#savoir" data-i18n="savoir">Savoir-faire</a></li>
+                <li><a href="#competences" data-i18n="competences">Compétences</a></li>
+                <li><a href="#projets" data-i18n="projets">Projets</a></li>
+                <li><a href="#contacts" data-i18n="contacts">Contact</a></li>
               </ul>
             </div>
             <div class="footer-column">
-              <h3>Contact</h3>
+              <h3 data-i18n="footerContactTitle">Contact</h3>
               <p>92130, Issy-les-Moulineaux<br></p>
               <p><a href="mailto:contact@monsite.fr">vkzk204@gmail.com</a></p>
               <p>+33 7 62 34 83 99</p>
             </div>
           </div>
           <div class="footer-bottom">
-            <p>&copy; 2025 MonSite. Tous droits réservés.</p>
-            <p>Site réalisé par Viktor Kozak &mdash; <a href="mailto:contact@monsite.fr">vkzk204@gmail.com</a></p>
+            <p data-i18n="footerCopyright">&copy; 2025 MonSite. Tous droits réservés.</p>
+            <p data-i18n="footerMadeBy">Site réalisé par Viktor Kozak — <span class="footer-mail">vkzk204@gmail.com</span></p>
           </div>
           <div class="backdrop"></div>
         </footer>
@@ -288,7 +304,24 @@ const translations = {
     contactInfo: `Une question, une idée ou un projet ?<br><br>
 Je reste ouvert aux opportunités de stage, de collaboration ou simplement à échanger autour de ces thématiques.<br><br>
 Vous pouvez me contacter via le formulaire ou m’écrire directement par mail.<br>
-N'hésitez pas, je réponds généralement sous 48h.`
+N'hésitez pas, je réponds généralement sous 48h.`,
+    savoir1Title: "Télédétection",
+    savoir1Desc: "Compréhension des chaînes de traitement d’images satellites (Sentinel, Landsat), calcul d’indices (NDVI, NDWI…), préparation et classification d’images à des fins d’analyse environnementale ou territoriale.",
+    savoir2Title: "Data",
+    savoir2Desc: "Maîtrise des fondamentaux de la structuration, du nettoyage et de la manipulation de données (spatiales et tabulaires), avec une initiation à Python (Pandas, GeoPandas) et SQL pour automatiser les traitements.",
+    savoir3Title: "IA - Automatisation",
+    savoir3Desc: "Premières compétences en automatisation de workflows SIG et exploration de l’apprentissage automatique appliqué aux données spatiales, via des scripts Python (scikit-learn, API) et des logiques de traitement reproductibles.",
+    projet1Title: "Titre du projet 1",
+    projet1Desc: "Application web de gestion de tâches avec authentification et interface responsive.",
+    projet2Title: "Titre du projet 2",
+    projet2Desc: "Site vitrine pour une association locale, réalisé en HTML, CSS et JavaScript.",
+    projet3Title: "Titre du projet 3",
+    projet3Desc: "Développement d'un mini-jeu interactif en JavaScript avec score et niveaux.",
+    footerDesc: "Portfolio, projets et contact.<br>Passionné par le développement web et la data.",
+    footerLinksTitle: "Liens utiles",
+    footerContactTitle: "Contact",
+    footerCopyright: "&copy; 2025 MonSite. Tous droits réservés.",
+    footerMadeBy: "Site réalisé par Viktor Kozak — <span class=\"footer-mail\">vkzk204@gmail.com</span>"
   },
   en: {
     accueil: "Home",
@@ -312,7 +345,24 @@ N'hésitez pas, je réponds généralement sous 48h.`
     contactInfo: `A question, an idea or a project?<br><br>
 I am open to internship or collaboration opportunities, or simply to discuss these topics.<br><br>
 You can contact me via the form or write to me directly by email.<br>
-Don't hesitate, I usually reply within 48 hours.`
+Don't hesitate, I usually reply within 48 hours.`,
+    savoir1Title: "Remote Sensing",
+    savoir1Desc: "Understanding satellite image processing chains (Sentinel, Landsat), calculation of indices (NDVI, NDWI…), preparation and classification of images for environmental or territorial analysis.",
+    savoir2Title: "Data",
+    savoir2Desc: "Mastery of the basics of structuring, cleaning and manipulating data (spatial and tabular), with an introduction to Python (Pandas, GeoPandas) and SQL to automate processing.",
+    savoir3Title: "AI - Automation",
+    savoir3Desc: "First skills in automating GIS workflows and exploring machine learning applied to spatial data, using Python scripts (scikit-learn, API) and reproducible processing logic.",
+    projet1Title: "Project 1 Title",
+    projet1Desc: "Web application for task management with authentication and responsive interface.",
+    projet2Title: "Project 2 Title",
+    projet2Desc: "Showcase website for a local association, built with HTML, CSS and JavaScript.",
+    projet3Title: "Project 3 Title",
+    projet3Desc: "Development of an interactive mini-game in JavaScript with score and levels.",
+    footerDesc: "Portfolio, projects and contact.<br>Passionate about web development and data.",
+    footerLinksTitle: "Useful links",
+    footerContactTitle: "Contact",
+    footerCopyright: "&copy; 2025 MonSite. All rights reserved.",
+    footerMadeBy: "Site created by Viktor Kozak — <span class=\"footer-mail\">vkzk204@gmail.com</span>"
   },
   pl: {
     accueil: "Strona główna",
@@ -336,10 +386,28 @@ Don't hesitate, I usually reply within 48 hours.`
     contactInfo: `Pytanie, pomysł lub projekt?<br><br>
 Jestem otwarty na staże, współpracę lub po prostu rozmowę na te tematy.<br><br>
 Możesz się ze mną skontaktować przez formularz lub napisać bezpośrednio maila.<br>
-Nie wahaj się, zazwyczaj odpowiadam w ciągu 48 godzin.`
+Nie wahaj się, zazwyczaj odpowiadam w ciągu 48 godzin.`,
+    savoir1Title: "Teledetekcja",
+    savoir1Desc: "Zrozumienie łańcuchów przetwarzania obrazów satelitarnych (Sentinel, Landsat), obliczanie indeksów (NDVI, NDWI…), przygotowanie i klasyfikacja obrazów do analiz środowiskowych lub terytorialnych.",
+    savoir2Title: "Dane",
+    savoir2Desc: "Opanowanie podstaw strukturyzacji, czyszczenia i manipulacji danymi (przestrzennymi i tabelarycznymi), z wprowadzeniem do Pythona (Pandas, GeoPandas) i SQL do automatyzacji przetwarzania.",
+    savoir3Title: "AI - Automatyzacja",
+    savoir3Desc: "Pierwsze umiejętności w automatyzacji przepływów pracy GIS i eksploracji uczenia maszynowego stosowanego do danych przestrzennych, za pomocą skryptów Python (scikit-learn, API) i powtarzalnych logik przetwarzania.",
+    projet1Title: "Tytuł projektu 1",
+    projet1Desc: "Aplikacja internetowa do zarządzania zadaniami z uwierzytelnianiem i responsywnym interfejsem.",
+    projet2Title: "Tytuł projektu 2",
+    projet2Desc: "Strona wizytówka dla lokalnego stowarzyszenia, wykonana w HTML, CSS i JavaScript.",
+    projet3Title: "Tytuł projektu 3",
+    projet3Desc: "Tworzenie interaktywnej mini-gry w JavaScript z punktacją i poziomami.",
+    footerDesc: "Portfolio, projekty i kontakt.<br>Pasjonat tworzenia stron internetowych i danych.",
+    footerLinksTitle: "Przydatne linki",
+    footerContactTitle: "Kontakt",
+    footerCopyright: "&copy; 2025 MonSite. Wszelkie prawa zastrzeżone.",
+    footerMadeBy: "Strona stworzona przez Viktor Kozak — <span class=\"footer-mail\">vkzk204@gmail.com</span>"
   }
 };
 
+// Fonction de traduction générique
 function setLang(lang) {
   // Menu
   document.querySelector('nav a[href="#acceuil"]').innerHTML = translations[lang].accueil;
@@ -368,6 +436,13 @@ function setLang(lang) {
     document.querySelectorAll('.section-title-appear').forEach(h2 => h2.classList.remove('visible'));
     revealTitlesOnScroll();
   }, 50);
+  // Traduction générique pour tous les éléments data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
 }
 
 // Ajoute la classe d'animation à tous les h2 de section au chargement
